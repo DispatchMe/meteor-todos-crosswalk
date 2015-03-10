@@ -1,0 +1,5 @@
+*.DS_Store
+
+.release/
+.build/
+.build-tools/
