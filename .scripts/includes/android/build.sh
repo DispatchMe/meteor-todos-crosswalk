@@ -16,6 +16,9 @@ SDK_TOOLS="${SDK}/tools";
 # Android SDK platform tools installed by Meteor
 SDK_PLATFORM_TOOLS="${SDK}/platform-tools";
 
+# Add the Android SDK to the path
+export PATH=$PATH:$SDK_TOOLS:$SDK_PLATFORM_TOOLS
+
 export ANDROID_HOME="${SDK}"
 
 # Download and unzip crosswalk package if it does not exist
@@ -53,10 +56,10 @@ cd "${ANDROID_DIR}/../../";
 # Build cordova project
 if [ "${DEBUG_MODE}" = true ]; then
   cordova build android;
-  mv "${ANDROID_DIR}/ant-build/CordovaApp-debug.apk" "${RELEASE_DIR}/android/CordovaApp-x86-debug.apk";
+  mv "${ANDROID_DIR}/ant-build/Todos-debug.apk" "${RELEASE_DIR}/android/CordovaApp-x86-debug.apk";
 else
   cordova build android --release;
-  mv "${ANDROID_DIR}/ant-build/CordovaApp-release-unsigned.apk" "${RELEASE_DIR}/android/CordovaApp-x86-unsigned.apk";
+  mv "${ANDROID_DIR}/ant-build/Todos-release-unsigned.apk" "${RELEASE_DIR}/android/CordovaApp-x86-unsigned.apk";
 fi
 
 cd "${ROOT}"
@@ -87,10 +90,10 @@ cd "${ANDROID_DIR}/../../";
 # Build cordova project
 if [ "${DEBUG_MODE}" = true ]; then
   cordova build android;
-  mv "${ANDROID_DIR}/ant-build/CordovaApp-debug.apk" "${RELEASE_DIR}/android/CordovaApp-arm-debug.apk";
+  mv "${ANDROID_DIR}/ant-build/Todos-debug.apk" "${RELEASE_DIR}/android/CordovaApp-arm-debug.apk";
 else
   cordova build android --release;
-  mv "${ANDROID_DIR}/ant-build/CordovaApp-release-unsigned.apk" "${RELEASE_DIR}/android/CordovaApp-arm-unsigned.apk";
+  mv "${ANDROID_DIR}/ant-build/Todos-release-unsigned.apk" "${RELEASE_DIR}/android/CordovaApp-arm-unsigned.apk";
 fi
 
 cd "${ROOT}"
