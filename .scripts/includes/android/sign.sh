@@ -1,4 +1,4 @@
-APPLICATION_NAME="Dispatch";
+APPLICATION_NAME="Todos";
 
 # Generate key to sign .apk if it does not exist
 if [ ! -f "${RELEASE_DIR}/android/${APPLICATION_NAME}.keystore" ]; then
